@@ -4,8 +4,8 @@ import { getVideosByCategory } from "../../redux/actions/videos.action";
 import "./_categoriesBar.scss";
 const keywords=[
     'All',
-    'React JS','Angular JS','React Native','Python','Data  Science','Blockchain',
-    'Matplotlib','Machine Learning','HTML','Current Affairs','Mongo DB'
+    'React JS','Modi','Mathura','Python','Data  Science','G20',
+    'virat kohli','Machine Learning','HTML','Current Affairs','Mongo DB','Shri Ramjanmbhoomi'
 ]
 
 const CategoriesBar=()=>{

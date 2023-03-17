@@ -5,6 +5,7 @@ import {AiOutlineSearch} from "react-icons/ai"
 import {MdNotifications,MdApps} from "react-icons/md"
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const Header=({handleToggleSidebar})=>{
 
@@ -16,6 +17,9 @@ const Header=({handleToggleSidebar})=>{
       e.preventDefault();
       navigate(`/search/${input}`);
    }
+
+   const { photoURL }= useSelector(state => state.auth?.user)
+   // console.log(photoURL)
 
    return(
    <div className="border border-dark header">
@@ -40,7 +44,8 @@ const Header=({handleToggleSidebar})=>{
    <div className="header__icons">
    <MdNotifications size={28}/>
    <MdApps size={28}/>
-   <img src="https://www.kindpng.com/picc/m/780-7804962_cartoon-avatar-png-image-transparent-avatar-user-image.png" alt="avatar"/>
+   <img src= {photoURL} alt=""/>
+   
    </div>
    </div>
    )

@@ -29,13 +29,15 @@ useEffect(()=>{
 dispatch(getCommentsOfVideoById(videoId))
 },[videoId,dispatch])
 
+const { photoURL }= useSelector(state => state.auth?.user)
+
 return(
 <div className="comments">
 {totalComments} comments
 
 <div className="comments__form d-flex w-100 my-2">
 
- <img src="https://png.pngtree.com/png-vector/20191101/ourmid/pngtree-businessman-avatar-icon-flat-style-png-image_1917273.jpg" alt="" 
+ <img src={photoURL} alt="" 
  className="rounded-circle mr-3"
  />
 
